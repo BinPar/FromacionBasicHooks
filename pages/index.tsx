@@ -1,11 +1,17 @@
 import React from 'react';
-import Head from 'next/head';
+import Link from 'next/link';
 
-export default (): JSX.Element => (
+import Header from '../components/Header';
+
+const PageIndex = (): JSX.Element => (
   <React.Fragment>
-    <Head>
-      <title>Hello BinPar!</title>
-    </Head>
-    <h1>Hello BinPar</h1>
+    <Header title="Hello BinPar!" />
+    <Link href="/counter">
+      <a href="/counter">Counters</a>
+    </Link>
   </React.Fragment>
 );
+
+PageIndex.displayName = 'Page.Index';
+
+export default PageIndex;
