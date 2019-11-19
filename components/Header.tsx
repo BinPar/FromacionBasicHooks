@@ -12,11 +12,9 @@ const Header = ({ title }: HeaderProps): JSX.Element => (
       <title>{title}</title>
     </Head>
     <h1>{title}</h1>
-    {window.location.pathname !== '/' && (
-      <Link href="/">
-        <a href="/">Back</a>
-      </Link>
-    )}
+    <Link href="/">
+      <a href="/">Back</a>
+    </Link>
     <br />
     <br />
   </React.Fragment>

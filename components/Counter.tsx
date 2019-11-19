@@ -1,14 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-interface CounterProps {
+import useCounter from '../hooks/useCounter';
+
+export interface InitialNumericValue {
   initialValue?: number;
 }
 
-const Counter = ({ initialValue = 0 }: CounterProps): JSX.Element => {
-  const [value, setValue] = useState(initialValue);
-  const incrementValue = (): void => {
-    setValue(value + 1);
-  };
+const Counter = ({ initialValue = 0 }: InitialNumericValue): JSX.Element => {
+  const [value, incrementValue] = useCounter(initialValue);
   return (
     <button type="button" onClick={incrementValue}>{value}</button>
   );

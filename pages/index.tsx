@@ -5,9 +5,13 @@ import Header from '../components/Header';
 
 const PageIndex = (): JSX.Element => (
   <React.Fragment>
-    <Header title="Hello BinPar!" />
+    <Header title="Basic React Hooks" />
     <Link href="/counter">
       <a href="/counter">Counters</a>
+    </Link>
+    <br />
+    <Link href="/responsive">
+      <a href="/responsive">Responsive</a>
     </Link>
   </React.Fragment>
 );
